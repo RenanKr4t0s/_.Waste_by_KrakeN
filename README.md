@@ -60,4 +60,3 @@ Início do primeiro projeto com **React Native**! A equipe **KrakeN** está pron
 ---
 
 Boa jornada de desenvolvimento, equipe **KrakeN**! 🦑🔥
-test commit congig
