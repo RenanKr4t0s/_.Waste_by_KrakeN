@@ -1,14 +1,15 @@
 {
   "expo": {
-    "name": "kraken-expo",
-    "slug": "kraken-expo",
-    "version": "1.0.0",
+    "name": "!Waste",
+    "slug": "!Waste",
+    "version": "0.0.2",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "scheme":"!Waste",
+    "icon": "./assets/octopus_icon.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/splash-icon.png",
+      "image": "./assets/octopus_icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -17,12 +18,15 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/octopus_icon.png",
         "backgroundColor": "#ffffff"
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
-    }
+      "favicon": "./assets/octopus_icon.png"
+    },
+    "plugins": [
+      "expo-router"
+    ]
   }
 }
