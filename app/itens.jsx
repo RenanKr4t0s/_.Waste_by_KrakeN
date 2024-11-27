@@ -1,10 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View} from 'react-native';
-import stylesMain from '../components/styles';
+import stylesMain from './components/styles';
 
-const products = require('../components/mockups/products')
+import products from './components/mockups/products'
 
-export default function App() {
+export default function Itens() {
   return (
     <View>
         <Text style={styles.textTitle}>Página de Produtos</Text>

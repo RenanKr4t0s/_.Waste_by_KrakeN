@@ -1,15 +1,16 @@
+import { Link } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, ImageBackground} from 'react-native';
 import BasicImage from './components/basicImage';
 
 const krakenLogo = require('../assets/KrakenSliced.webp')
 
-export default function App() {
+export default function Kraken() {
   return (
     <ImageBackground style={styles.krakenBox} source={krakenLogo}>
         <Text style={styles.textTitle}>KrakeN</Text>
           <View style={styles.subView}>
-            <Text style={styles.textBody}> Boa Tarde Kraken Team!</Text>
+            <Link href="/itens" style={styles.textBody}> Ver Produtos</Link>
           </View>
           {/* Trecho que transforma a barra de status em transparente: */}
           <StatusBar style="auto" />
