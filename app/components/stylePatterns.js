@@ -1,5 +1,8 @@
+//Padrões universais de estilos que formam a identidade visual do app
+
 const stylesPattern = {
-    mainCollor : '#4829B8',
+    mainColor : '#4829B8',
+    clearColor : '#ffffff',
     mainFont : 'Montserrat'
 }
 
