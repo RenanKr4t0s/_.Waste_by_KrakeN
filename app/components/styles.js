@@ -1,14 +1,15 @@
 import { StyleSheet } from "react-native";
+import stylesPattern from "./stylePatterns";
 
 const stylesMain = StyleSheet.create({
     mainTitle:{
-        color: '#4829B8',
+        color: stylesPattern.mainCollor,
         fontSize: 26,
-        fontFamily: 'Montserrat',
+        fontFamily: stylesPattern.mainFont,
         fontWeight: 500,
     },
     testTitle:{
-        color: '#4829B8',
+        color: stylesPattern.mainCollor,
         fontSize: 26,
         fontWeight: 500,
     }

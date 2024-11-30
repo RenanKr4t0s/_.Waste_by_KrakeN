@@ -8,6 +8,7 @@ export default function App() {
     <View style={styles.container}>
       <Text style={stylesMain.mainTitle}>Kraken está rodando!</Text>
       <Link href="/kraken" style={stylesMain.testTitle}>Veja o monstro</Link>
+      <Link href="/splashScreen" style={stylesMain.testTitle}>Ver Splashscreen</Link>
       <StatusBar style="auto" />
     </View>
   );
