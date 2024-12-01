@@ -1,15 +1,15 @@
 {
   "expo": {
-    "name": "!Waste",
-    "slug": "!Waste",
+    "name": "!WASTE",
+    "slug": "!WASTE",
     "version": "0.0.2",
     "orientation": "portrait",
-    "scheme":"!Waste",
-    "icon": "./assets/octopus_icon.png",
+    "scheme":"!WASTE",
+    "icon": "./assets/wasteIcons/120x120.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/octopus_icon.png",
+      "image": "./assets/wasteIcons/120x120.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -18,12 +18,12 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/octopus_icon.png",
+        "foregroundImage": "./assets/wasteIcons/120x120.png",
         "backgroundColor": "#ffffff"
       }
     },
     "web": {
-      "favicon": "./assets/octopus_icon.png"
+      "favicon": "./assets/wasteIcons/120x120.png"
     },
     "plugins": [
       "expo-router"

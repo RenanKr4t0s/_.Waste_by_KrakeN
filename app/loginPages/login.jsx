@@ -8,22 +8,36 @@ import stylesMain from '../components/styles';
 import InputToLogin from '../components/inputToLogin';
 
 export default function splashScreen() {
-    const [number, setNumber] = React.useState('');
+    const [user, setUser] = React.useState({
+      name:'',
+      password:''
+    });
 
-    function handleChange(text) {
-        console.log(text); 
-        setNumber(text);
+    function handleChange(field, content) {
+        console.log(field+ " :" + content); 
+        setUser((prevUser) => ({
+          ...prevUser,  // Mantém o restante das propriedades do objeto
+          [field]: content    // Atualiza apenas o campo 'name'
+        }));
     }
 
   return (
     <SafeAreaView style={stylesMain.basicContainer}>
         <Text style={stylesMain.mainTitle}>Bem-vindo de volta!</Text>
         <InputToLogin
-            label="Teste de input" 
-            onChangeText={handleChange}
-            value={number}
-            placeholder="Digite um número"
-            keyboardType="numeric"
+            label="Nome de usuário" 
+            onChangeText={(text)=> handleChange('name', text)}
+            value={user.name}
+            placeholder="Digite seu nome"
+            keyboardType="email-adress"
+        />
+        <InputToLogin
+            label="Senha" 
+            onChangeText={(text)=> handleChange('password', text)}
+            value={user.password}
+            placeholder="Digite sua senha"
+            keyboardType="email-adress"
+            secureTextEntry={true}
         />
         <StatusBar style="auto" />
     </SafeAreaView>
