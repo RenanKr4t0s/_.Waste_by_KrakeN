@@ -22,7 +22,33 @@ const stylesMain = StyleSheet.create({
         color: stylesPattern.mainColor,
         fontSize: 26,
         fontWeight: 500,
-    }
+    },
+    icon:{},
+    button:{},
+    inputArea:{
+        flexDirection:'row',
+        alignItems: 'center',
+    },
+    inputLabel:{
+        color: stylesPattern.mainColor,
+        fontSize: 16,
+        marginLeft: 45,
+    },
+    inputPhoto:{
+        backgroundColor: stylesPattern.main20Color,
+        borderRadius: 4,
+        width:35,
+        height: 35,
+    },
+    inputMain:{
+        height: 40,
+        width: 280,
+        margin: 12,
+        borderWidth: 1,
+        padding: 10,
+    },
+    inputForgotButton:{},
+
 })
 
 

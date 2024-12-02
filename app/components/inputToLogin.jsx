@@ -1,5 +1,6 @@
 import React from 'react'
-import { TextInput, StyleSheet, View, Text } from 'react-native'
+import { TextInput, StyleSheet, View, Text, Image } from 'react-native'
+import stylesMain from './styles';
 
 export function InputToLogin({ label, ...inputProps }) {
     const [number, setNumber] = React.useState('');
@@ -11,11 +12,16 @@ export function InputToLogin({ label, ...inputProps }) {
 
     return (
         <View>
-            {label && <Text style={styles.label}>{label}</Text>}
+
+            {label && <Text style={stylesMain.inputLabel}>{label}</Text>}
+            <View style={stylesMain.inputArea}>
+            <Image style={stylesMain.inputPhoto} source={require('./mockups/BenJhonson.jpg')} />
+
             <TextInput
-                style={styles.input}
+                style={stylesMain.inputMain}
                 {...inputProps} // Espalha as props passadas para o TextInput
             />
+            </View>
         </View>
     );
 }
