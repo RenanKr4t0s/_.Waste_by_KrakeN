@@ -8,9 +8,9 @@ const stylesMain = StyleSheet.create({
         flex: 1,
         backgroundColor: stylesPattern.clearColor,
         alignItems: 'center',
-        justifyContent: 'center',
-        gap:15,
-        padding:10,
+        justifyContent: 'space-around',
+        gap:20,
+        padding:50,
       },
     mainTitle:{
         color: stylesPattern.mainColor,
@@ -36,18 +36,51 @@ const stylesMain = StyleSheet.create({
     },
     inputPhoto:{
         backgroundColor: stylesPattern.main20Color,
-        borderRadius: 4,
-        width:35,
-        height: 35,
+        borderRadius: 8,
+        width:40,
+        height: 40,
+        fontWeight: 400,
+    },
+    inputContainerToIcon:{
+        borderRadius: 10,
+        borderColor: stylesPattern.main20Color,
+        height: 40,
+        width: 310,
+        margin: 5,
+        borderWidth: 2,
+        flexDirection:'row',
+        alignItems: 'center',
     },
     inputMain:{
-        height: 40,
-        width: 280,
-        margin: 12,
-        borderWidth: 1,
+        placeholderTextColor: stylesPattern.main20Color,
         padding: 10,
+        width: 260,
     },
-    inputForgotButton:{},
+    loginForgotButton:{
+        alignSelf:'flex-end',
+        marginEnd: 40,
+    },
+    loginButtonSection:{
+        alignItems:'center',
+        width:380,
+    },
+    loginEnterButton:{
+        backgroundColor:stylesPattern.mainColor,
+        borderRadius: 10,
+        width: 360,
+    },
+    loginEnterText:{
+        color:stylesPattern.clearColor,
+        fontSize:16,
+        fontWeight:600,
+        lineHeight:40,
+        textAlign:'center',
+        fontFamily:stylesPattern.mainFont,
+    },
+    loginSetOfButtons:{
+        flexDirection:"row",
+        gap:5,
+    },
 
 })
 

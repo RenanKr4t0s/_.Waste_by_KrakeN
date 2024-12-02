@@ -1,15 +1,16 @@
 import React from 'react'
-import { Image, StyleSheet, Text, View } from 'react-native'
+import { View, Text, Button, TouchableOpacity } from 'react-native'
+import { Link } from 'expo-router';
+
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView } from 'react-native-safe-area-context'
 
-import stylesPattern from '../components/stylePatterns'
 import stylesMain from '../components/styles';
 import InputToLogin from '../components/inputToLogin';
 
 export default function splashScreen() {
     const [user, setUser] = React.useState({
-      name:'',
+      email:'',
       password:''
     });
 
@@ -24,43 +25,36 @@ export default function splashScreen() {
   return (
     <SafeAreaView style={stylesMain.basicContainer}>
         <Text style={stylesMain.mainTitle}>Bem-vindo de volta!</Text>
-        <InputToLogin
-            label="Nome de usuário" 
-            onChangeText={(text)=> handleChange('name', text)}
-            value={user.name}
-            placeholder="Digite seu nome"
-            keyboardType="email-adress"
-        />
-        <InputToLogin
-            label="Senha" 
-            onChangeText={(text)=> handleChange('password', text)}
-            value={user.password}
-            placeholder="Digite sua senha"
-            keyboardType="email-adress"
-            secureTextEntry={true}
-        />
+        <View>
+          <InputToLogin
+              label="Email" 
+              onChangeText={(text)=> handleChange('email', text)}
+              value={user.name}
+              placeholder="nome@email.com"
+              keyboardType="email-adress"
+          />
+          <InputToLogin
+              label="Senha"
+              hideable  = {true} 
+              onChangeText={(text)=> handleChange('password', text)}
+              value={user.password}
+              placeholder="Digite sua senha"
+              keyboardType="email-adress"
+          />
+          <Link href="/kraken" style={stylesMain.loginForgotButton}>Esqueceu a Senha?</Link>
+        </View>
+        <View style={stylesMain.loginButtonSection}>
+        <TouchableOpacity style={stylesMain.loginEnterButton}>
+          <Text style={stylesMain.loginEnterText}>Entrar</Text>
+        </TouchableOpacity>
+          <Text style={stylesMain.loginEnterText} >ou</Text>
+          <View style={stylesMain.loginSetOfButtons} >
+            <Button title="xXx" />
+            <Button title="xXx" />
+            <Button title="xXx" />  
+          </View>
+        </View>
         <StatusBar style="auto" />
     </SafeAreaView>
   )
 }
-
-const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      gap: 300,
-      padding: 135,
-      backgroundColor: stylesPattern.clearColor,
-      alignItems: 'center',
-      justifyContent: 'flex-end',
-    },
-    images:{
-        width: 135,
-        height: 30,
-        resizeMode: 'contain',
-    },
-    developed:{ 
-        color: stylesPattern.clearColor,
-        fontSize: 20,
-        marginBottom: 5,
-    }
-  });

@@ -1,43 +1,42 @@
 import React from 'react'
-import { TextInput, StyleSheet, View, Text, Image } from 'react-native'
-import stylesMain from './styles';
+import { TextInput, View, Text, Image } from 'react-native'
 
-export function InputToLogin({ label, ...inputProps }) {
+import stylesMain from './styles';
+import stylesPattern from './stylePatterns';
+
+import EyeToLoginToggle from './eyeToLoginToggle';
+
+ function InputToLogin({ label, hideable=false, ...inputProps }) {
     const [number, setNumber] = React.useState('');
+    const [hidePass, setHidePass] = React.useState(hideable)
 
     function handleChange(text) {
         console.log(text); 
         setNumber(text);
     }
+    function handleTouch(){
+        setHidePass(!hidePass)
+    }
 
     return (
         <View>
-
             {label && <Text style={stylesMain.inputLabel}>{label}</Text>}
             <View style={stylesMain.inputArea}>
             <Image style={stylesMain.inputPhoto} source={require('./mockups/BenJhonson.jpg')} />
+            <View style={stylesMain.inputContainerToIcon} >
+                <TextInput
+                    style={stylesMain.inputMain}
+                    placeholderTextColor={stylesPattern.main20Color}
+                    secureTextEntry={hidePass}
+                    {...inputProps} // Espalha as props passadas para o TextInput    
+                />
+                {hideable && <EyeToLoginToggle handleTouch={handleTouch}/>}
+                
+            </View>
 
-            <TextInput
-                style={stylesMain.inputMain}
-                {...inputProps} // Espalha as props passadas para o TextInput
-            />
             </View>
         </View>
     );
 }
-
-const styles = StyleSheet.create({
-    label: {
-        marginBottom: 5,
-        fontSize: 16,
-        color: '#333',
-    },
-    input: {
-      height: 40,
-      margin: 12,
-      borderWidth: 1,
-      padding: 10,
-    },
-  });
 
 export default InputToLogin
