@@ -1,12 +1,15 @@
 import React from 'react'
 import { View, Text, Button, TouchableOpacity } from 'react-native'
 import { Link } from 'expo-router';
+import { useStorageFunctions } from '../storageFunc/storageFunctions';
 
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView } from 'react-native-safe-area-context'
 
 import stylesMain from '../components/styles';
 import InputToLogin from '../components/inputToLogin';
+
+const {storeData} = useStorageFunctions();
 
 export default function splashScreen() {
     const [user, setUser] = React.useState({
@@ -21,6 +24,10 @@ export default function splashScreen() {
           [field]: content    // Atualiza apenas o campo 'name'
         }));
     }
+    async function handlePress (){
+      await storeData('email',user.email)
+      console.log("dados salvos")
+    }
 
   return (
     <SafeAreaView style={stylesMain.basicContainer}>
@@ -29,7 +36,7 @@ export default function splashScreen() {
           <InputToLogin
               label="Email" 
               onChangeText={(text)=> handleChange('email', text)}
-              value={user.name}
+              value={user.email}
               placeholder="nome@email.com"
               keyboardType="email-adress"
           />
@@ -39,12 +46,12 @@ export default function splashScreen() {
               onChangeText={(text)=> handleChange('password', text)}
               value={user.password}
               placeholder="Digite sua senha"
-              keyboardType="email-adress"
+              keyboardType="email-address"
           />
           <Link href="/kraken" style={stylesMain.loginForgotButton}>Esqueceu a Senha?</Link>
         </View>
         <View style={stylesMain.loginButtonSection}>
-        <TouchableOpacity style={stylesMain.loginEnterButton}>
+        <TouchableOpacity style={stylesMain.loginEnterButton} onPress={handlePress}>
           <Text style={stylesMain.loginEnterText}>Entrar</Text>
         </TouchableOpacity>
           <Text style={stylesMain.loginEnterText} >ou</Text>

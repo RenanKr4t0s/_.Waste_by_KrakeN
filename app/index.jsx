@@ -10,6 +10,7 @@ export default function App() {
       <Link href="/kraken" style={stylesMain.testTitle}>Veja o monstro</Link>
       <Link href="/splashScreen" style={stylesMain.testTitle}>Ver Splashscreen</Link>
       <Link href="/loginPages/login" style={stylesMain.testTitle}>Login</Link>
+      <Link href="/loginPages/dataTest" style={stylesMain.testTitle}>Teste de Dados</Link>
       <StatusBar style="auto" />
     </View>
   );
