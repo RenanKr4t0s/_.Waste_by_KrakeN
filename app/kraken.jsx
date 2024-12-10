@@ -10,7 +10,7 @@ export default function Kraken() {
     <ImageBackground style={styles.krakenBox} source={krakenLogo}>
         <Text style={styles.textTitle}>KrakeN</Text>
           <View style={styles.subView}>
-            <Link href="/itens" style={styles.textBody}> Ver Produtos</Link>
+            <Link href="/home" style={styles.textBody}> HOME</Link>
           </View>
           {/* Trecho que transforma a barra de status em transparente: */}
           <StatusBar style="auto" />
