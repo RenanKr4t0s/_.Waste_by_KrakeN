@@ -9,7 +9,7 @@
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/wasteIcons/120x120.png",
+      "image": "./assets/Splash_Screen.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -17,8 +17,13 @@
       "supportsTablet": true
     },
     "android": {
+      "splash": {
+        "image": "./assets/Splash_Screen.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#ffffff"
+      },
       "adaptiveIcon": {
-        "foregroundImage": "./assets/wasteIcons/120x120.png",
+        "foregroundImage": "./assets/Splash_Screen.png",
         "backgroundColor": "#ffffff"
       }
     },

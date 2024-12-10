@@ -51,10 +51,10 @@ export default function splashScreen() {
           <Link href="/kraken" style={stylesMain.loginForgotButton}>Esqueceu a Senha?</Link>
         </View>
         <View style={stylesMain.loginButtonSection}>
-        <TouchableOpacity style={stylesMain.loginEnterButton} onPress={handlePress}>
-          <Text style={stylesMain.loginEnterText}>Entrar</Text>
+        <TouchableOpacity style={stylesMain.mainButton} onPress={handlePress}>
+          <Text style={stylesMain.mainButtonText}>Entrar</Text>
         </TouchableOpacity>
-          <Text style={stylesMain.loginEnterText} >ou</Text>
+          <Text style={stylesMain.mainButtonText} >ou</Text>
           <View style={stylesMain.loginSetOfButtons} >
             <Button title="xXx" />
             <Button title="xXx" />

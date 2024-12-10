@@ -8,7 +8,7 @@ const stylesMain = StyleSheet.create({
         flex: 1,
         backgroundColor: stylesPattern.clearColor,
         alignItems: 'center',
-        justifyContent: 'space-around',
+        justifyContent: 'space-evenly',
         gap:20,
         padding:50,
       },
@@ -17,6 +17,53 @@ const stylesMain = StyleSheet.create({
         fontSize: 26,
         fontFamily: stylesPattern.mainFont,
         fontWeight: 500,
+    },
+    mainSubtitle:{
+        color: stylesPattern.mainColor,
+        fontSize: 18,
+        fontFamily: stylesPattern.mainFont,
+        fontWeight: 500,
+    },
+    mainImage:{
+        backgroundColor: stylesPattern.main20Color,
+        borderRadius: 8,
+        width:200,
+        height: 200,
+        fontWeight: 400,
+    },
+    mainButtonContainer:{
+        flexDirection: 'column',
+        justifyContent: 'center', // centraliza no eixo vertical
+        alignItems: 'center', // centraliza no eixo horizontal
+        gap: 15,
+    },
+    mainButton:{
+        backgroundColor:stylesPattern.mainColor,
+        borderRadius: 10,
+        width: 360,
+    },
+    mainButtonClear:{
+        borderRadius: 10,
+        borderColor: stylesPattern.mainColor,
+        borderWidth: 2,
+        width: 360,   
+        backgroundColor:stylesPattern.clearColor,
+    },
+    mainButtonText:{
+        color:stylesPattern.clearColor,
+        fontSize:16,
+        fontWeight:600,
+        lineHeight:40,
+        textAlign:'center',
+        fontFamily:stylesPattern.mainFont,
+    },
+    mainButtonTextClear:{
+        color:stylesPattern.mainColor,
+        fontSize:16,
+        fontWeight:600,
+        lineHeight:40,
+        textAlign:'center',
+        fontFamily:stylesPattern.mainFont,
     },
     testTitle:{
         color: stylesPattern.mainColor,
@@ -44,10 +91,10 @@ const stylesMain = StyleSheet.create({
     inputContainerToIcon:{
         borderRadius: 10,
         borderColor: stylesPattern.main20Color,
+        borderWidth: 2,
         height: 40,
         width: 310,
         margin: 5,
-        borderWidth: 2,
         flexDirection:'row',
         alignItems: 'center',
     },
@@ -63,19 +110,6 @@ const stylesMain = StyleSheet.create({
     loginButtonSection:{
         alignItems:'center',
         width:380,
-    },
-    loginEnterButton:{
-        backgroundColor:stylesPattern.mainColor,
-        borderRadius: 10,
-        width: 360,
-    },
-    loginEnterText:{
-        color:stylesPattern.clearColor,
-        fontSize:16,
-        fontWeight:600,
-        lineHeight:40,
-        textAlign:'center',
-        fontFamily:stylesPattern.mainFont,
     },
     loginSetOfButtons:{
         flexDirection:"row",

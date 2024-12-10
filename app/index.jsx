@@ -7,10 +7,20 @@ export default function App() {
   return (
     <View style={stylesMain.basicContainer}>
       <Text style={stylesMain.mainTitle}>Kraken está rodando!</Text>
-      <Link href="/kraken" style={stylesMain.testTitle}>Veja o monstro</Link>
-      <Link href="/splashScreen" style={stylesMain.testTitle}>Ver Splashscreen</Link>
-      <Link href="/loginPages/login" style={stylesMain.testTitle}>Login</Link>
-      <Link href="/loginPages/dataTest" style={stylesMain.testTitle}>Teste de Dados</Link>
+      <View style={stylesMain.mainButtonContainer}>
+        <Link href="/splashScreen" style={stylesMain.mainButton}>
+          <Text style={stylesMain.mainButtonText}>Splashscreen</Text>
+        </Link>
+        <Link href="/loginPages/primeiraTela" style={stylesMain.mainButton}>
+          <Text style={stylesMain.mainButtonText}>PrimeiraTela</Text>
+        </Link>
+        <Link href="/loginPages/login" style={stylesMain.mainButton}>
+          <Text style={stylesMain.mainButtonText}>Login</Text>
+        </Link>
+        <Link href="/loginPages/dataTest" style={stylesMain.mainButton}>
+          <Text style={stylesMain.mainButtonText}>Teste de Dados</Text>
+        </Link>
+      </View>
       <StatusBar style="auto" />
     </View>
   );
