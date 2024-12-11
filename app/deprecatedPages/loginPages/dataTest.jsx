@@ -1,8 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import { Button, Text, View } from 'react-native';
 
-import { useStorageFunctions } from '../storageFunc/storageFunctions';
-import stylesMain from '../components/styles';
+import { useStorageFunctions } from '../../functions/storageFunctions';
+import stylesMain from '../../components/styles';
 import { useState } from 'react';
 
 const {getData} = useStorageFunctions();

@@ -1,8 +1,8 @@
 import React from 'react'
 import { TextInput, View, Text, Image } from 'react-native'
 
-import stylesMain from './styles';
-import stylesPattern from './stylePatterns';
+import stylesMain from '../styles';
+import stylesPattern from '../stylePatterns';
 
 import EyeToLoginToggle from './eyeToLoginToggle';
 
@@ -22,7 +22,7 @@ import EyeToLoginToggle from './eyeToLoginToggle';
         <View>
             {label && <Text style={stylesMain.inputLabel}>{label}</Text>}
             <View style={stylesMain.inputArea}>
-            <Image style={stylesMain.inputPhoto} source={require('./mockups/BenJhonson.jpg')} />
+            <Image style={stylesMain.inputPhoto} source={require('../mockups/BenJhonson.jpg')} />
             <View style={stylesMain.inputContainerToIcon} >
                 <TextInput
                     style={stylesMain.inputMain}

@@ -98,6 +98,16 @@ const stylesMain = StyleSheet.create({
         flexDirection:'row',
         alignItems: 'center',
     },
+    nameInput:{
+        borderRadius: 10,
+        borderColor: stylesPattern.main20Color,
+        borderWidth: 2,
+        height: 40,
+        width: 310,
+        padding: 10,
+        margin: 5,
+        placeholderTextColor: stylesPattern.main20Color,
+    },
     inputMain:{
         placeholderTextColor: stylesPattern.main20Color,
         padding: 10,

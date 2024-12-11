@@ -1,8 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View} from 'react-native';
-import stylesMain from '../components/styles';
+import stylesMain from '../../components/styles';
 
-const products = require('../components/mockups/products')
+const products = require('../../components/mockups/products')
 
 export default function App() {
   return (

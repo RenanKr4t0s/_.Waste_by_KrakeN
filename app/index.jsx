@@ -11,15 +11,6 @@ export default function App() {
         <Link href="/splashScreen" style={stylesMain.mainButton}>
           <Text style={stylesMain.mainButtonText}>Splashscreen</Text>
         </Link>
-        <Link href="/loginPages/primeiraTela" style={stylesMain.mainButton}>
-          <Text style={stylesMain.mainButtonText}>PrimeiraTela</Text>
-        </Link>
-        <Link href="/loginPages/login" style={stylesMain.mainButton}>
-          <Text style={stylesMain.mainButtonText}>Login</Text>
-        </Link>
-        <Link href="/loginPages/dataTest" style={stylesMain.mainButton}>
-          <Text style={stylesMain.mainButtonText}>Teste de Dados</Text>
-        </Link>
       </View>
       <StatusBar style="auto" />
     </View>
