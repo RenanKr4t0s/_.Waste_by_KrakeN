@@ -7,17 +7,58 @@ const stylesMain = StyleSheet.create({
     basicContainer: {
         flex: 1,
         backgroundColor: stylesPattern.clearColor,
-        alignItems: 'center',
-        justifyContent: 'space-evenly',
         gap:20,
-        padding:50,
-      },
+        padding: 30,
+    },
+    basicInnerContainer:{
+        textAlign: 'center',
+    },
     mainTitle:{
-        color: stylesPattern.mainColor,
+        color: stylesPattern.textColor,
         fontSize: 26,
         fontFamily: stylesPattern.mainFont,
-        fontWeight: 500,
+        fontWeight: stylesPattern.wMedium,
     },
+    mainButton:{
+        backgroundColor:stylesPattern.mainColor,
+        borderRadius: 10,
+        width: 360,
+    },
+    mainButtonDisabled:{
+        backgroundColor:stylesPattern.enabeledColor,
+        borderRadius: 10,
+        width: 360,
+    },
+    mainButtonText:{
+        color:stylesPattern.clearColor,
+        fontSize:16,
+        fontWeight:600,
+        lineHeight:40,
+        textAlign:'center',
+        fontFamily:stylesPattern.mainFont,
+    },
+    mainButtonTextDisabled:{
+        color:stylesPattern.mainColor,
+        fontSize:16,
+        fontWeight:600,
+        lineHeight:40,
+        textAlign:'center',
+        fontFamily:stylesPattern.mainFont,
+    },
+    nameInput:{
+        borderRadius: 10,
+        borderColor: stylesPattern.main20Color,
+        borderWidth: 2,
+        height: 40,
+        padding: 10,
+        margin: 5,
+        placeholderTextColor: stylesPattern.main20Color,
+    },
+
+
+
+    //estilos deprecated
+ 
     mainSubtitle:{
         color: stylesPattern.mainColor,
         fontSize: 18,
@@ -37,11 +78,7 @@ const stylesMain = StyleSheet.create({
         alignItems: 'center', // centraliza no eixo horizontal
         gap: 15,
     },
-    mainButton:{
-        backgroundColor:stylesPattern.mainColor,
-        borderRadius: 10,
-        width: 360,
-    },
+
     mainButtonClear:{
         borderRadius: 10,
         borderColor: stylesPattern.mainColor,
@@ -49,14 +86,7 @@ const stylesMain = StyleSheet.create({
         width: 360,   
         backgroundColor:stylesPattern.clearColor,
     },
-    mainButtonText:{
-        color:stylesPattern.clearColor,
-        fontSize:16,
-        fontWeight:600,
-        lineHeight:40,
-        textAlign:'center',
-        fontFamily:stylesPattern.mainFont,
-    },
+
     mainButtonTextClear:{
         color:stylesPattern.mainColor,
         fontSize:16,
@@ -97,16 +127,6 @@ const stylesMain = StyleSheet.create({
         margin: 5,
         flexDirection:'row',
         alignItems: 'center',
-    },
-    nameInput:{
-        borderRadius: 10,
-        borderColor: stylesPattern.main20Color,
-        borderWidth: 2,
-        height: 40,
-        width: 310,
-        padding: 10,
-        margin: 5,
-        placeholderTextColor: stylesPattern.main20Color,
     },
     inputMain:{
         placeholderTextColor: stylesPattern.main20Color,

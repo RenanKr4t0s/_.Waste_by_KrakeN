@@ -5,12 +5,10 @@ import stylesMain from '../components/styles';
 
  function NameInput({...inputProps }) {
     return (
-        <View style={stylesMain.inputContainerToIcon} >
-            <TextInput
-                style={stylesMain.nameInput}
-                {...inputProps}  
-            />
-        </View>
+        <TextInput
+            style={stylesMain.nameInput}
+            {...inputProps}  
+        />
     );
 }
 

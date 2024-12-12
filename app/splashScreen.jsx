@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Image, StyleSheet, Text, View } from "react-native";
-import { useRouter } from "expo-router"; // Expo Router
+import { useRouter } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaView } from "react-native-safe-area-context";
 
