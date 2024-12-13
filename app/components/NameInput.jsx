@@ -1,6 +1,6 @@
 import React from 'react'
 import { TextInput, View, Text } from 'react-native'
-import stylesMain from '../components/styles';
+import stylesMain from '../styles/styles';
 
 
  function NameInput({...inputProps }) {

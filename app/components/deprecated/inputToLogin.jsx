@@ -1,8 +1,8 @@
 import React from 'react'
 import { TextInput, View, Text, Image } from 'react-native'
 
-import stylesMain from '../styles';
-import stylesPattern from '../stylePatterns';
+import stylesMain from '../../styles/styles';
+import stylesPattern from '../../styles/stylePatterns';
 
 import EyeToLoginToggle from './eyeToLoginToggle';
 

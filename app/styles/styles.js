@@ -8,7 +8,7 @@ const stylesMain = StyleSheet.create({
         flex: 1,
         backgroundColor: stylesPattern.clearColor,
         gap:20,
-        padding: 30,
+        padding: 20,
     },
     basicInnerContainer:{
         textAlign: 'center',
@@ -22,17 +22,15 @@ const stylesMain = StyleSheet.create({
     mainButton:{
         backgroundColor:stylesPattern.mainColor,
         borderRadius: 10,
-        width: 360,
     },
     mainButtonDisabled:{
         backgroundColor:stylesPattern.enabeledColor,
         borderRadius: 10,
-        width: 360,
     },
     mainButtonText:{
         color:stylesPattern.clearColor,
         fontSize:16,
-        fontWeight:600,
+        fontWeight:stylesPattern.wBold,
         lineHeight:40,
         textAlign:'center',
         fontFamily:stylesPattern.mainFont,
@@ -40,7 +38,7 @@ const stylesMain = StyleSheet.create({
     mainButtonTextDisabled:{
         color:stylesPattern.mainColor,
         fontSize:16,
-        fontWeight:600,
+        fontWeight:stylesPattern.wBold,
         lineHeight:40,
         textAlign:'center',
         fontFamily:stylesPattern.mainFont,

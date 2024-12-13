@@ -1,18 +1,50 @@
 import { Link } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
-import { Text, View } from 'react-native';
-import stylesMain from './components/styles';
+import { Text, TouchableOpacity, View, Dimensions} from 'react-native';
+import stylesMain from './styles/styles';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
-export default function App() {
+const { height } = Dimensions.get('window');
+
+export default function index() {
+  async function handlePress (){
+    await storeData('name',false)
+    console.log("nome de usuário Apagado")
+  }
+
   return (
-    <View style={stylesMain.basicContainer}>
-      <Text style={stylesMain.mainTitle}>Kraken está rodando!</Text>
-      <View style={stylesMain.mainButtonContainer}>
+    <SafeAreaView style={stylesMain.basicContainer}>
+      <View style={styles.topSection}>
+        <Text style={stylesMain.mainTitle}>Kraken está rodando!</Text>
+        <Text style={stylesMain.mainButtonTextDisabled}>Essa é a tela de controle</Text>
+      </View>
+      <View style={styles.middleSection}>
         <Link href="/splashScreen" style={stylesMain.mainButton}>
-          <Text style={stylesMain.mainButtonText}>Splashscreen</Text>
+          <Text style={stylesMain.mainButtonText}>Rodar o App</Text>
         </Link>
+        <TouchableOpacity onPress={handlePress} style={stylesMain.mainButton}>
+            <Text style={stylesMain.mainButtonText}>Resetar DATA</Text>
+        </TouchableOpacity>
       </View>
       <StatusBar style="auto" />
-    </View>
+    </SafeAreaView>
   );
 }
+
+const styles = {
+  topSection: {
+      height: height * 0.2,
+      justifyContent: 'flex-end',
+      alignItems: 'center',
+  },
+  middleSection: {
+      height: height * 0.4,
+      justifyContent: 'center',
+      gap:20,
+  },
+  bottomSection: {
+      height: height * 0.2,
+      justifyContent: 'flex-start',
+      gap:20,
+  },
+};

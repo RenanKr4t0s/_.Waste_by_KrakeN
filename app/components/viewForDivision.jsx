@@ -1,24 +1,11 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-export default function App(title,children,button) {
+export default function App(children) {
 
   return (
     <View style={styles.container}>
-      <View style={styles.margin} />
 
-      <View style={styles.topSection}>
-        <Text>{title}</Text>
-      </View>
-
-      <View style={styles.middleSection}>
-        {children}
-      </View>
-
-      <View style={styles.bottomSection}>
-        {button}
-      </View>
-      <View style={styles.margin} />
     </View>
   );
 }

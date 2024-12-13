@@ -5,7 +5,7 @@ import { Link } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView } from 'react-native-safe-area-context'
 
-import stylesMain from '../components/styles';
+import stylesMain from '../styles/styles';
 
 export default function splashScreen() {
 

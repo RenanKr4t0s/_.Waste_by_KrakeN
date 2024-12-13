@@ -6,7 +6,7 @@ import { useStorageFunctions } from '../../functions/storageFunctions';
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView } from 'react-native-safe-area-context'
 
-import stylesMain from '../../components/styles';
+import stylesMain from '../../styles/styles';
 import InputToLogin from '../../components/deprecated/inputToLogin';
 
 const {storeData} = useStorageFunctions();

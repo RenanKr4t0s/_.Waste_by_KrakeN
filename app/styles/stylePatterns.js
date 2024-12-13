@@ -8,8 +8,8 @@ const stylesPattern = {
     clearColor : '#ffffff',
     mainFont : 'Montserrat',
     wLight : 400,
-wMedium : 500,
-wBold : 600,
+    wMedium : 500,
+    wBold : 600,
 }
 
 export default stylesPattern

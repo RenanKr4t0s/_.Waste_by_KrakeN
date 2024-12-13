@@ -3,8 +3,9 @@ import React from 'react';
 import { useStorageFunctions } from './functions/storageFunctions';
 import { useRouter } from 'expo-router';
 
-import stylesMain from './components/styles';
+import stylesMain from './styles/styles';
 import NameInput from './components/NameInput'
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 const { height } = Dimensions.get('window');
 const preferencias = () => {
@@ -32,7 +33,7 @@ const preferencias = () => {
         
     }
     return (
-        <View style={stylesMain.basicContainer}>      
+        <SafeAreaView style={stylesMain.basicContainer}>      
             <View style={styles.topSection}>
                 <Text style={stylesMain.mainTitle}>Selecione o tipo de receita</Text>
                 <Text style={stylesMain.mainTitle}>que gostaria de cozinhar</Text>
@@ -56,33 +57,25 @@ const preferencias = () => {
                     <Text style={stylesMain.mainButtonTextDisabled}>Faço isso mais tarde!</Text>
                 </TouchableOpacity>
             </View>
-        </View>
+        </SafeAreaView>
     );
 }     
 const styles = {
-    container: {
-    
-        backgroundColor: '#f5f5f5',
-    },
     topSection: {
         height: height * 0.2,
-        backgroundColor: '#ffcccb',
-        justifyContent: 'center',
+        justifyContent: 'flex-end',
         alignItems: 'center',
     },
     middleSection: {
         height: height * 0.4,
-        backgroundColor: '#add8e6',
-        justifyContent: 'flex-start',
+        justifyContent: 'center',
     },
     bottomSection: {
         height: height * 0.2,
-        backgroundColor: '#90ee90',
-        justifyContent: 'center',
-        alignItems: 'center',
+        justifyContent: 'flex-start',
         gap:20,
     },
-};
+  };
 
 
 

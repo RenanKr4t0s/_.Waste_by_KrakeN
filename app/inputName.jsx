@@ -3,45 +3,49 @@ import React from 'react';
 import { useStorageFunctions } from './functions/storageFunctions';
 import { useRouter } from 'expo-router';
 
-import stylesMain from './components/styles';
+import stylesMain from './styles/styles';
 import NameInput from './components/NameInput'
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 const { height } = Dimensions.get('window');
+
 const inputName = () => {
     const {storeData} = useStorageFunctions();
     const router = useRouter();
 
     const [clicable, setClicable]=React.useState(false)
-    const [user, setUser] = React.useState({
-        name:'Usuário',
-        preferences:[]
-    });
+    const [userName, setUserName] = React.useState('Usuário')
+    // const [user, setUser] = React.useState({
+    //     name:'Usuário',
+    //     preferences:[]
+    // });
 
-    function handleChange(field, content) {
-        console.log(field+ " :" + content); 
-        setUser((prevUser) => ({
-            ...prevUser,
-            [field]: content    
-        }));
+    function handleChange(content) {
+        console.log(content); 
+        setUserName(content)
+        // setUser((prevUser) => ({
+        //     ...prevUser,
+        //     [field]: content    
+        // }));
         setClicable(true)
     }
     async function handlePress (){
-        await storeData('name',user.name)
+        await storeData('name',userName)
         router.push("/preferencias")
         console.log("dados salvos")
         
     }
     return (
-        <View style={stylesMain.basicContainer}>      
+        <SafeAreaView style={stylesMain.basicContainer}>      
             <View style={styles.topSection}>
                 <Text style={stylesMain.mainTitle}>Bem vindo ao !WASTE</Text>
-                <Text style={stylesMain.mainTitle}>{user.name}!</Text>
+                <Text style={stylesMain.mainTitle}>{userName}!</Text>
             </View>
     
             <View style={styles.middleSection}>
                 <NameInput
                     placeholder="Digite seu nome"
-                    onChangeText={(text)=>(handleChange('name',text))} 
+                    onChangeText={handleChange} 
                 />
             </View>   
             <View style={styles.bottomSection}>
@@ -57,32 +61,24 @@ const inputName = () => {
                     <Text style={stylesMain.mainButtonTextDisabled}>Faço isso mais tarde!</Text>
                 </TouchableOpacity>
             </View>
-        </View>
+        </SafeAreaView>
     );
 }     
 const styles = {
-    container: {
-    
-    },
     topSection: {
         height: height * 0.2,
-        justifyContent: 'center',
+        justifyContent: 'flex-end',
         alignItems: 'center',
     },
     middleSection: {
         height: height * 0.4,
-        justifyContent: 'flex-start',
+        justifyContent: 'center',
     },
     bottomSection: {
         height: height * 0.2,
-        justifyContent: 'center',
-        alignItems: 'center',
+        justifyContent: 'flex-start',
         gap:20,
     },
 };
-
-
-
-
 
 export default inputName
