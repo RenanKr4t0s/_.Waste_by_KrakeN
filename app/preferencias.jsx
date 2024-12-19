@@ -1,13 +1,15 @@
+// Em requisitos (não consta) : Tela de Preferências
+
 import { View, Text, TouchableOpacity, Dimensions } from 'react-native';
 import React from 'react';
 import { useStorageFunctions } from './functions/storageFunctions';
 import { useRouter } from 'expo-router';
 
 import stylesMain from './styles/styles';
-import NameInput from './components/NameInput'
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 const { height } = Dimensions.get('window');
+
 const preferencias = () => {
     const {storeData} = useStorageFunctions();
     const router = useRouter();
@@ -28,7 +30,7 @@ const preferencias = () => {
     }
     async function handlePress (){
         await storeData('name',user.name)
-        router.push("/splashScreen")
+        router.push("/home")
         console.log("dados salvos")
         
     }

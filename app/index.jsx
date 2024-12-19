@@ -22,6 +22,10 @@ export default function index() {
         <Link href="/splashScreen" style={stylesMain.mainButton}>
           <Text style={stylesMain.mainButtonText}>Rodar o App</Text>
         </Link>
+        <Link href="/temporaryScreens/goToAll" style={stylesMain.mainButton}>
+          <Text style={stylesMain.mainButtonText}>Ver todas as telas</Text>
+        </Link>
+        
         <TouchableOpacity onPress={handlePress} style={stylesMain.mainButton}>
             <Text style={stylesMain.mainButtonText}>Resetar DATA</Text>
         </TouchableOpacity>
