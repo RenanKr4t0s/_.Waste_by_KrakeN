@@ -1,26 +1,29 @@
+import { Link } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View} from 'react-native';
-import stylesMain from './components/styles';
+import { StyleSheet, Text, View, ImageBackground} from 'react-native';
 
-import products from './components/mockups/products'
+const krakenLogo = require('../assets/KrakenSliced.webp')
 
-export default function Itens() {
+export default function Kraken() {
   return (
-    <View>
-        <Text style={styles.textTitle}>Página de Produtos</Text>
+    <ImageBackground style={styles.krakenBox} source={krakenLogo}>
+        <Text style={styles.textTitle}>KrakeN</Text>
           <View style={styles.subView}>
-            <Text style={styles.textBody}> Aqui mostraremos os produtos</Text>
-            <Text style={stylesMain.mainTitle}>Aqui um texto editado</Text>
-            <Text style={styles.textBody}> {products[0].name}</Text>
+            <Link href="/itens" style={styles.textBody}> Ver Produtos</Link>
           </View>
-
           {/* Trecho que transforma a barra de status em transparente: */}
           <StatusBar style="auto" />
-      </View>
+      </ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
+  krakenBox:{
+    flex:1,
+    padding: 10,
+    alignItems: 'center',
+    justifyContent:'flex-end', 
+  },
   textTitle:{
     color: 'yellow',
     fontSize: 45,

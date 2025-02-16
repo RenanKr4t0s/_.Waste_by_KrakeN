@@ -17,5 +17,4 @@ export default products = [
         'created': '2024-11-11',
         'validTo': '2025-09-09',
     },
-
 ]
