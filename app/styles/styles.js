@@ -1,7 +1,7 @@
 // Estilos em comum utilizados para desenvolver as páginas
 
 import { StyleSheet } from "react-native";
-import stylesPattern from "./stylePatterns";
+import stylesPattern from "./stylePatterns"
 
 const stylesMain = StyleSheet.create({
     basicContainer: {
@@ -51,6 +51,38 @@ const stylesMain = StyleSheet.create({
         padding: 10,
         margin: 5,
         placeholderTextColor: stylesPattern.main20Color,
+    },
+    preferencesInativeButton:{
+        lineHeight:40,
+        textAlign:'center',
+        borderColor:stylesPattern.enabeledColor,
+        borderWidth: 3,
+        borderRadius: 12,
+        paddingHorizontal:20,
+    },
+    preferencesActiveButton:{
+        textAlign:'center',
+        borderColor:stylesPattern.mainColor,
+        backgroundColor: stylesPattern.main10Color,
+        borderWidth: 3,
+        borderRadius: 12,
+        paddingHorizontal:20,
+    },
+    preferencesInactiveText:{
+        color:stylesPattern.enabeledColor,
+        fontSize:18,
+        fontWeight:stylesPattern.wMedium,
+        lineHeight:45,
+        textAlign:'center',
+        fontFamily:stylesPattern.mainFont,
+    },
+    preferencesActiveText:{
+        color:stylesPattern.mainColor,
+        fontSize:18,
+        fontWeight:stylesPattern.wMedium,
+        lineHeight:45,
+        textAlign:'center',
+        fontFamily:stylesPattern.mainFont,
     },
 
 
