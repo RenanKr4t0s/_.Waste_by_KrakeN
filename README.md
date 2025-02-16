@@ -15,6 +15,11 @@ Atividades passadas ao [Trelo da !KrakeN](https://trello.com/b/JW9SfSb7/waste)
 Layouts by [Rafael Figma](https://www.figma.com/design/rCq7qrpH8J47DpSxrQ53Mw/Jobs?node-id=3533-134&node-type=canvas&t=u6NlPTYBBeYS2oHO-0)
 
 ---
+## Lista de funções em Context
+-[ ] Criar as funções e contestos abaixo
+![Lista Context](./notes/planning.excalidraw.svg)
+
+
 
 ## 📦 Como Iniciar o App  
 
