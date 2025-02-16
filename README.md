@@ -1,6 +1,6 @@
-# 🚀 App !Waste 🦑
+# 🚀 Branch Develop => App !Waste 🦑
 
-Início do primeiro projeto com **React Native**! A equipe **KrakeN** está pronta para dominar os mares do código. 🌊⚡
+Começando a usar estrutura de trabalho mais coerente onde a partir da Develop criaremos novas features
 
 ---
 
