@@ -4,6 +4,11 @@ Início do primeiro projeto com **React Native**! A equipe **KrakeN** está pron
 
 ---
 
+# Comit log
+- Feito o Comit final da versão de testes e praticas do App.
+- Próxima versão é inicio do MVP oficial
+---
+
 ## ✅ Controle de Atividades 
 
 Atividades passadas ao [Trelo da !KrakeN](https://trello.com/b/JW9SfSb7/waste)
