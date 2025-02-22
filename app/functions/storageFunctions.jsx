@@ -3,7 +3,7 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Alert } from 'react-native';
 
-export function useStorageFunctions(){
+export default function useStorageFunctions(){
     async function storeData(property, value){
         try {
           await AsyncStorage.setItem(property, value);

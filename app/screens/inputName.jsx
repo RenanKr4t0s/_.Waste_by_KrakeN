@@ -2,7 +2,7 @@
 
 import { View, Text, TouchableOpacity, Dimensions } from 'react-native';
 import React from 'react';
-import { useStorageFunctions } from '../functions/storageFunctions';
+import  useStorageFunctions from '../functions/storageFunctions';
 import { useRouter } from 'expo-router';
 
 import stylesMain from '../styles/styles';

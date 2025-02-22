@@ -7,7 +7,7 @@ import { useRouter } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import stylesMain from '../styles/styles';
-import { useStorageFunctions } from '../functions/storageFunctions';
+import useStorageFunctions from '../functions/storageFunctions';
 import PreferenciasButton from '../components/PreferenciasButton';
 
 import SafeContainer from '../components/layoutScreen/SafeContainer';
