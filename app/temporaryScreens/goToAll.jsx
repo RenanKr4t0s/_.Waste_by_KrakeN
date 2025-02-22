@@ -13,7 +13,7 @@ export default function goToAll(){
     const router = useRouter();
 
     async function handlePress (){
-        router.push("/splashScreen")
+        router.push("/screens/splashScreen")
         console.log("Voltando pra Splashscreen")
     }
     async function handleVoltar(){
@@ -28,25 +28,25 @@ export default function goToAll(){
             </View>
             <View style={styles.middleSection}>
 
-            <Link href="/inputName" style={stylesMain.mainButton}>
+            <Link href="/screens/inputName" style={stylesMain.mainButton}>
                 <Text style={stylesMain.mainButtonText}>inputName</Text>
             </Link>
-            <Link href="/preferencias" style={stylesMain.mainButton}>
+            <Link href="/screens/preferencias" style={stylesMain.mainButton}>
                 <Text style={stylesMain.mainButtonText}>preferencias</Text>
             </Link>
-            <Link href="/home" style={stylesMain.mainButton}>
+            <Link href="/screens/home" style={stylesMain.mainButton}>
                 <Text style={stylesMain.mainButtonText}>home</Text>
             </Link>
-            <Link href="/scanner" style={stylesMain.mainButton}>
+            <Link href="/screens/scanner" style={stylesMain.mainButton}>
                 <Text style={stylesMain.mainButtonText}>scanner</Text>
             </Link>
-            <Link href="/cadManual" style={stylesMain.mainButton}>
+            <Link href="/screens/cadManual" style={stylesMain.mainButton}>
                 <Text style={stylesMain.mainButtonText}>cadManual</Text>
             </Link>
-            <Link href="/minhaDispensa" style={stylesMain.mainButton}>
+            <Link href="/screens/minhaDispensa" style={stylesMain.mainButton}>
                 <Text style={stylesMain.mainButtonText}>minhaDispensa</Text>
             </Link>
-            <Link href="/telaConfig" style={stylesMain.mainButton}>
+            <Link href="/screens/telaConfig" style={stylesMain.mainButton}>
                 <Text style={stylesMain.mainButtonText}>telaConfig</Text>
             </Link>
 

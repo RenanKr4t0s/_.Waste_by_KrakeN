@@ -2,7 +2,7 @@ import { View, Text, TouchableOpacity, Dimensions } from 'react-native';
 import React from 'react';
 import { useRouter } from 'expo-router';
 
-import stylesMain from './styles/styles';
+import stylesMain from '../styles/styles';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 const { height } = Dimensions.get('window');
@@ -12,7 +12,7 @@ export default function cadManual(){
     const router = useRouter();
 
     async function handlePress (){
-        router.push("/splashScreen")
+        router.push("/screens/splashScreen")
         console.log("Voltando pra Splashscreen")
     }
     return(

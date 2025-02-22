@@ -2,23 +2,22 @@ import { View, Text, TouchableOpacity, Dimensions } from 'react-native';
 import React from 'react';
 import { useRouter } from 'expo-router';
 
-import stylesMain from './styles/styles';
+import stylesMain from '../styles/styles';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 const { height } = Dimensions.get('window');
 const clicable = true
-
-export default function telaConfig(){
+export default function scanner(){
     const router = useRouter();
 
     async function handlePress (){
-        router.push("/splashScreen")
+        router.push("/screens/splashScreen")
         console.log("Voltando pra Splashscreen")
     }
     return(
         <SafeAreaView style={stylesMain.basicContainer}>      
             <View style={styles.topSection}>
-                <Text style={stylesMain.mainTitle}>Sou uma tela de telaConfig</Text>
+                <Text style={stylesMain.mainTitle}>Sou uma tela de scanner</Text>
                 <Text style={stylesMain.mainTitle}>aqui criaremos a tela inteira</Text>
             </View>
             <View style={styles.middleSection}>

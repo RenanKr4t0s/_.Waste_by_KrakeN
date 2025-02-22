@@ -4,11 +4,6 @@ Começando a usar estrutura de trabalho mais coerente onde a partir da Develop c
 
 ---
 
-# Comit log
-- Feito o Comit final da versão de testes e praticas do App.
-- Próxima versão é inicio do MVP oficial
----
-
 ## ✅ Controle de Atividades 
 
 Atividades passadas ao [Trelo da !KrakeN](https://trello.com/b/JW9SfSb7/waste)

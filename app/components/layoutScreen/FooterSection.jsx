@@ -12,7 +12,9 @@ export default function FooterSection({ children }) {
     );
 }
 const footerStyle = {
-    height: height * 0.2,
+    height: height * 0.25,
     justifyContent: 'flex-start',
+    paddingHorizontal: 20,
+    paddingVertical: 10,
     gap: 20,
 }

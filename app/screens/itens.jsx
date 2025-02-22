@@ -1,8 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View} from 'react-native';
-import stylesMain from './components/styles';
+import stylesMain from '../styles/styles';
 
-import products from './components/mockups/products'
+import products from '../components/mockups/products'
 
 export default function Itens() {
   return (

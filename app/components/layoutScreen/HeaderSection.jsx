@@ -14,4 +14,5 @@ const headerStyle = {
         height: height * 0.2,
         justifyContent: 'flex-end',
         alignItems: 'center',
+        backgroundColor: 'red'
     }

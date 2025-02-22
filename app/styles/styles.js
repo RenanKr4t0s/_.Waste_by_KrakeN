@@ -18,6 +18,15 @@ const stylesMain = StyleSheet.create({
         fontSize: 26,
         fontFamily: stylesPattern.mainFont,
         fontWeight: stylesPattern.wMedium,
+        textAlign: 'center'
+    },
+    titleContainer:{
+        width: '100%',
+    },
+    inputGroup:{
+        paddingVertical: 60,
+        width: '100%',
+        textAlign: 'center'
     },
     mainButton:{
         backgroundColor:stylesPattern.mainColor,
@@ -51,6 +60,7 @@ const stylesMain = StyleSheet.create({
         padding: 10,
         margin: 5,
         placeholderTextColor: stylesPattern.main20Color,
+        width: '100%',
     },
     preferencesInativeButton:{
         lineHeight:40,

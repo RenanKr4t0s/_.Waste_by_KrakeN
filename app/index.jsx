@@ -19,7 +19,7 @@ export default function index() {
         <Text style={stylesMain.mainButtonTextDisabled}>Essa é a tela de controle</Text>
       </View>
       <View style={styles.middleSection}>
-        <Link href="/splashScreen" style={stylesMain.mainButton}>
+        <Link href="/screens/splashScreen" style={stylesMain.mainButton}>
           <Text style={stylesMain.mainButtonText}>Rodar o App</Text>
         </Link>
         <Link href="/temporaryScreens/goToAll" style={stylesMain.mainButton}>

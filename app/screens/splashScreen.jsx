@@ -4,17 +4,17 @@ import { useRouter } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-import stylesPattern from "./styles/stylePatterns";
+import stylesPattern from "../styles/stylePatterns";
 
-const wasteLogo = require("../assets/Waste_Logo.png");
-const krakenLogo = require("../assets/Kraken_Logo.png");
+const wasteLogo = require("../../assets/Waste_Logo.png");
+const krakenLogo = require("../../assets/Kraken_Logo.png");
 
 export default function SplashScreen() {
   const router = useRouter();
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      router.push("/inputName"); // Navega para a próxima página
+      router.push("/screens/inputName"); // Navega para a próxima página
     }, 2000);
 
     return () => clearTimeout(timer); // Limpa o timer

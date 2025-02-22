@@ -1,7 +1,5 @@
 import React from 'react';
-import { View, Dimensions } from 'react-native';
-
-const { height } = Dimensions.get('window');
+import { View } from 'react-native';
 
 export default function BoddySection({children}) {
 
@@ -12,10 +10,13 @@ export default function BoddySection({children}) {
     );
 }
 const boddyStyle = {
-    height: height * 0.4,
+
+    flex: 1,
+    paddingHorizontal: 20,
+    paddingVertical: 10,
     flexDirection: 'row',
     flexWrap: 'wrap',
-    justifyContent: 'flex-start',
+    justifyContent: 'center',
     alignItems: 'flex-start',
     gap: 10,
 }
