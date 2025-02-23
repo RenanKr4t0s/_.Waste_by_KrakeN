@@ -3,12 +3,26 @@ import { StatusBar } from 'expo-status-bar';
 import { Text, TouchableOpacity, View, Dimensions} from 'react-native';
 import stylesMain from './styles/styles';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import useStorageFunctions from './functions/storageFunctions';
+import { useEffect, useState } from 'react';
+import products from './components/mockups/products';
 
 const { height } = Dimensions.get('window');
+const {storeData, getData, guardarObjeto} = useStorageFunctions()
 
 export default function index() {
+  
+  const [dataName, setDataName] = useState("Jhon Doe")
+  const [basket, setBasket] = useState('willThis')
+
+  useEffect(()=>{
+    setDataName(getData('name'))
+    setBasket(getData('basket'))
+  },[])
+
   async function handlePress (){
-    await storeData('name',false)
+    await storeData('name','')
+    await guardarObjeto('basket',null)
     console.log("nome de usuário Apagado")
   }
 
@@ -24,11 +38,12 @@ export default function index() {
         </Link>
         <Link href="/temporaryScreens/goToAll" style={stylesMain.mainButton}>
           <Text style={stylesMain.mainButtonText}>Ver todas as telas</Text>
-        </Link>
-        
+        </Link>    
         <TouchableOpacity onPress={handlePress} style={stylesMain.mainButton}>
             <Text style={stylesMain.mainButtonText}>Resetar DATA</Text>
         </TouchableOpacity>
+        <Text>{dataName}</Text>
+        <Text>{basket}</Text>
       </View>
       <StatusBar style="auto" />
     </SafeAreaView>

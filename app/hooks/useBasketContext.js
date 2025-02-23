@@ -1,9 +1,13 @@
-import { BasketContext } from "../contexts/BasketContext";
 import { useContext } from "react";
-import { CREATE_ITEM, DELETE_ITEM, CHANGE_ITEM_QUANT } from "../reducers/basketReducer";
+import { BasketContext } from "../contexts/BasketContext";
+import { CREATE_ITEM, DELETE_ITEM, CHANGE_ITEM_QUANT, CARREGA_BASKET_SALVO } from "../reducers/basketReducer";
 
 export default function useBasketContext() {
     const { basket, dispatch } = useContext(BasketContext);
+
+    if (!basket) {
+        throw new Error("useBasketContext deve ser usado dentro de um BasketProvider");
+    }
 
     function criarProduto(produto) {
         dispatch({ type: CREATE_ITEM, payload: produto })
@@ -34,6 +38,6 @@ export default function useBasketContext() {
         criarProduto,
         adicionarProduto,
         subtrairProduto,
-        deletarProduto
+        deletarProduto,
     }
 }

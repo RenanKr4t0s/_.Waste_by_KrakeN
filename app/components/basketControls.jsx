@@ -19,7 +19,6 @@ export default function BasketControls(){
         'validTo': '2025-09-09',
     }
 
-
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Eu sou o Basket Controls</Text>
