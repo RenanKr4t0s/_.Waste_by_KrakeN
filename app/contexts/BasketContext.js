@@ -5,7 +5,6 @@ import products from "../components/mockups/products";
 export const BasketContext = createContext();
 BasketContext.displayName = "Cesta";
 
-
 export default function BasketProvider({ children }){
     const estadoInicial = [];
     const [basket, dispatch] = useReducer(basketReducer, estadoInicial, () => products)

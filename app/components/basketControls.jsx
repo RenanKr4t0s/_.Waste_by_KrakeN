@@ -11,6 +11,14 @@ export default function BasketControls(){
         deletarProduto
     } = useBasketContext();
 
+    const newTestObject={
+        'id':'a04',
+        'name': 'Produto Adicional',
+        'quantity': 1,
+        'created': '2024-11-11',
+        'validTo': '2025-09-09',
+    }
+
 
     return (
         <View style={styles.container}>
@@ -29,8 +37,15 @@ export default function BasketControls(){
                     <TouchableOpacity onPress={()=>adicionarProduto(item.id)} style={stylesMain.mainButton}>
                         <Text style={stylesMain.mainButtonText}>  +  </Text>
                     </TouchableOpacity>
+                    <TouchableOpacity onPress={()=>deletarProduto(item.id)} style={stylesMain.mainButton}>
+                        <Text style={stylesMain.mainButtonText}> Delete </Text>
+                    </TouchableOpacity>
                 </View>
             ))}
+            <TouchableOpacity onPress={()=>criarProduto(newTestObject)} style={stylesMain.mainButton}>
+                <Text style={stylesMain.mainButtonText}>Criar Produto Adicional</Text>
+            </TouchableOpacity>
+
         </View>
     );
 }
