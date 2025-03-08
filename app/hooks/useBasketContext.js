@@ -1,6 +1,10 @@
 import { useContext } from "react";
 import { BasketContext } from "../contexts/BasketContext";
-import { CREATE_ITEM, DELETE_ITEM, CHANGE_ITEM_QUANT, CARREGA_BASKET_SALVO } from "../reducers/basketReducer";
+import {
+    CREATE_ITEM,
+    DELETE_ITEM,
+    CHANGE_ITEM_QUANT
+} from "../reducers/basketReducer";
 
 export default function useBasketContext() {
     const { basket, dispatch } = useContext(BasketContext);
@@ -31,6 +35,11 @@ export default function useBasketContext() {
 
     function deletarProduto(produtoId) {
         dispatch({ type: DELETE_ITEM, payload: produtoId })
+    }
+
+    // Funcções que faltam
+    function pegarReceitas(produtoId){
+        return console.log("Backend - passa produto pega receita")
     }
 
     return {

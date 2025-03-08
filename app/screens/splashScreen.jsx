@@ -4,6 +4,10 @@ import { useRouter } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaView } from "react-native-safe-area-context";
 
+import useStorageFunctions from "../functions/storageFunctions";
+
+const { pegarObjeto } = useStorageFunctions();
+
 import stylesPattern from "../styles/stylePatterns";
 
 const wasteLogo = require("../../assets/Waste_Logo.png");
@@ -13,10 +17,17 @@ export default function SplashScreen() {
   const router = useRouter();
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      router.push("/screens/inputName"); // Navega para a próxima página
-    }, 2000);
-
+    async function carregarUser(){
+      const userSalvo = await pegarObjeto('user');
+      const timer = setTimeout(() => {
+        if (userSalvo){
+          router.push("/screens/home");
+        }else{
+          router.push("/screens/inputName"); // Navega para a próxima página
+        }
+      }, 2000);
+    }
+    carregarUser
     return () => clearTimeout(timer); // Limpa o timer
   }, [router]);
 

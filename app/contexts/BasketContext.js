@@ -1,7 +1,6 @@
 import { createContext, useEffect, useReducer } from "react";
-import basketReducer from "../reducers/basketReducer";
+import basketReducer, {CARREGA_BASKET_SALVO } from "../reducers/basketReducer";
 import useStorageFunctions from "../functions/storageFunctions";
-import {CARREGA_BASKET_SALVO } from "../reducers/basketReducer";
 
 const {pegarObjeto } = useStorageFunctions();
 
